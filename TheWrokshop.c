@@ -36,5 +36,12 @@ portb.rb6 = 0 ; // initialisation du led vert pour le capteur du gaz
    delay_ms(1500);
    lcd_cmd(_LCD_CLEAR);
    delay_ms(1500);
+   lcd_cmd (_lcd_cursor_off);
+   lcd_out(2,6,"feu et gaz dans un laboratoire") ;
+   delay_ms(1500);
+   lcd_cmd(_LCD_CLEAR) ;
+   
+   portd.rd2 = 1 ;
+   portd.rd1 = 0 ;
 }                                                                 
 }
